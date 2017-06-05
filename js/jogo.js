@@ -24,7 +24,8 @@ function addBola(){
         //cria um novo campo
       
         conteudo.appendChild(bola);
-    	//document.body.appendChild(bola);
+         removerPorTempo(bola);
+    	
     }
     function estourar(elemento) {
       var x = document.getElementsByTagName("div")[2].getAttribute("style");
@@ -36,8 +37,16 @@ function addBola(){
 
         contar(elemento);
     }
+    function removerPorTempo(elemento){
+        window.setTimeout(function() {
+            clearInterval(1000);
+            conteudo.removeChild(elemento);
+        }, 2000);
+    }
+
     function iniciar(){
     	setInterval(addBola,1000);
+
     }
     function contar(elemento) {
 
