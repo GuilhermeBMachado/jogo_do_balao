@@ -1,11 +1,16 @@
 function addBola(){
+        var conteudo = document.getElementById("conteudo");
+        var width = conteudo.clientWidth;
+        var height = conteudo.clientHeight;
+
+        console.log(height);
     	//cria um paramentro no html
     	var bola = document.createElement("div");
     	//aplica o atributo css na classe bola
     	bola.setAttribute("class","bola");
     	//randomiza valores de altura e largura
-    	var x = Math.floor(Math.random()*500);
-    	var y = Math.floor(Math.random()*400);
+    	var x = Math.floor(Math.random()* (width - 50));
+    	var y = Math.floor(Math.random()* (height - 50));
     	//ramdomiza valores RGB para alteracao de cores
     	var r = Math.floor(Math.random()*256);
     	var g = Math.floor(Math.random()*256);
@@ -17,20 +22,31 @@ function addBola(){
     	bola.setAttribute("onclick", "estourar(this)");
 
         //cria um novo campo
-    	document.body.appendChild(bola);
+      
+        conteudo.appendChild(bola);
+         removerPorTempo(bola);
+    	
     }
     function estourar(elemento) {
       var x = document.getElementsByTagName("div")[2].getAttribute("style");
     console.log(x);
     	//remove o campo
-    	document.body.removeChild(elemento);
+    	conteudo.removeChild(elemento);
         // incrementa o contador
 
 
         contar(elemento);
     }
+    function removerPorTempo(elemento){
+        window.setTimeout(function() {
+            clearInterval(1000);
+            conteudo.removeChild(elemento);
+        }, 2000);
+    }
+
     function iniciar(){
     	setInterval(addBola,1000);
+
     }
     function contar(elemento) {
 
