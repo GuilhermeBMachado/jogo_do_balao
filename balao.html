@@ -11,20 +11,26 @@
 		<h1> Bem-vindo Fulano</h1>
 	</header>
 	<main>
-		<div class="centralizar">
-			<div id="conteudo">	</div>
+		<div class="container">
+			<div class="fundo-quadro" id="quadro">	</div>
 			
 			
 			<article class="descricao-nivel">
 				<h1>Nivel 1</h1>
 				<p>Caros amigos, a adoção de políticas descentralizadoras afeta positivamente a correta previsão dos relacionamentos verticais entre as hierarquias.</p>
 				<p> É claro que a mobilidade dos capitais internacionais auxilia a preparação e a composição dos modos de operação convencionais.</p>
+				
 			</article>
 		</div>
-		<div class="conteudo-descricao">
-			<div id="titulo">Bolas Estouradas: </div>
-			<div id="pontuacao">0</div>
+		<div class="container">
+			<div class="quadro-descricao">
+				<div class="fundo-quadro" id="titulo">Bolas Estouradas: </div>
+				<div class="fundo-quadro" id="pontuacao">0</div>
+				<span class="fundo-quadro" id="cronometro" >00:00:00</span>
+			</div>
+			<input class="fundo-quadro botao" type="button" value="Iniciar" onclick="inicia();">
 		</div>
 	</main>
+	<script type="text/javascript" src="js/cronometro.js"></script>
 	</body>
 </html>

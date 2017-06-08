@@ -1,7 +1,7 @@
 function addBola(){
-        var conteudo = document.getElementById("conteudo");
-        var width = conteudo.clientWidth;
-        var height = conteudo.clientHeight;
+        var quadro = document.getElementById("quadro");
+        var width = quadro.clientWidth;
+        var height = quadro.clientHeight;
 
         console.log(height);
     	//cria um paramentro no html
@@ -23,7 +23,7 @@ function addBola(){
 
         //cria um novo campo
       
-        conteudo.appendChild(bola);
+        quadro.appendChild(bola);
          removerPorTempo(bola);
     	
     }
@@ -31,7 +31,7 @@ function addBola(){
       var x = document.getElementsByTagName("div")[2].getAttribute("style");
     console.log(x);
     	//remove o campo
-    	conteudo.removeChild(elemento);
+    	quadro.removeChild(elemento);
         // incrementa o contador
 
 
@@ -40,7 +40,7 @@ function addBola(){
     function removerPorTempo(elemento){
         window.setTimeout(function() {
             clearInterval(1000);
-            conteudo.removeChild(elemento);
+            quadro.removeChild(elemento);
         }, 2000);
     }
 

@@ -10,7 +10,7 @@ body {
 }
 header{
 	background-color: #b1b1b1;
-	padding: 1.5em;
+	padding: 1em;
 	margin-bottom: 0.5em;
 	box-shadow: 2px 2px 15px rgba(0,0,0, 0.3);
 }
@@ -32,26 +32,24 @@ main{
 	border-radius: 25px;
 	position: absolute;
 }
-.centralizar{
+.container{
 	float: left;
+	width: 100%;
 	
 }
-.centralizar:before,.centralizar:after{
+.container:before,.container:after{
 	clear:both;
 }
-#conteudo {
+#quadro {
 	float: left;
 	width: 60%;
 	height: 450px;
-	border: 1px solid #000;
-	background-color: #EEE;
 	margin-bottom: 10px;
 	display: inline-block;
 	box-shadow: 2px 2px 15px rgba(0,0,0, 0.3);
 }
 
 .descricao-nivel{
-	float: right;
 	width: 40%;
 	display: inline-block;
 	line-height: 1em;
@@ -64,30 +62,55 @@ main{
 	color: #444;
 	
 }
-.conteudo-descricao{
-	display: block;
+
+.quadro-descricao {
+	float: left;
 	width: 60%;	
 	margin: 0;
 }
+.quadro-descricao:before,.quadro-descricao:after{
+	clear:both;
+}
 
-#titulo {
-	width: 390px;
-	height: 70px;
+.fundo-quadro {
 	border: 1px solid #000;
 	background-color: #EEE;
+}
+
+#titulo {
+	width: 50%;
+	height: 70px;
 	float: left;
 	margin-right: 10px;
 	font-size: 50px;
 	text-align: center;
 }
-#pontuacao {
-	width: 148px;
+
+#cronometro {
+	width: 24%;
 	height: 70px;
-	border: 1px solid #000;
-	background-color: #EEE;
+	float: right; 
+	margin-right: 2%;
+	font-size: 50px;
+	padding: 0 5px;
+}
+
+#pontuacao {
+	width: 20%;
+	height: 70px;
 	float: right;
 	font-size: 50px;
 	text-align: center;
 	font-weight: bold;
 	
+}
+
+.botao{
+	width: 25%;
+	height: 70px;
+	margin-right: 7%; 
+	float: right;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
 }
